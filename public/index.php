@@ -2,6 +2,8 @@
 
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Route;
 
 define('LARAVEL_START', microtime(true));
 
@@ -57,4 +59,8 @@ $user = App\Models\User::find(1);
 //dd($user->hasRole('web-developer')); //вернёт true
 //dd($user->hasRole('project-manager')); //вернёт false
 //dd($user->deletePermissions('manage-users')); //выдаём разрешение
-dd($user->hasPermission('manage-users'));
+dump(Route::group(['middleware' => 'role:web-developer'], function() {
+    Route::get('/dashboard', function() {
+        return 'Добро пожаловать, Веб-разработчик';
+    });
+}));
