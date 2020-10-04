@@ -55,12 +55,4 @@ $response = tap($kernel->handle(
 ))->send();
 
 $kernel->terminate($request, $response);
-$user = App\Models\User::find(1);
-//dd($user->hasRole('web-developer')); //вернёт true
-//dd($user->hasRole('project-manager')); //вернёт false
-//dd($user->deletePermissions('manage-users')); //выдаём разрешение
-dump(Route::group(['middleware' => 'role:web-developer'], function() {
-    Route::get('/dashboard', function() {
-        return 'Добро пожаловать, Веб-разработчик';
-    });
-}));
+//$user = App\Models\User::find(1);

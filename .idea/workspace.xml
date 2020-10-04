@@ -20,22 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83171322-7804-42d9-86e9-f111557fe4bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7a480d46-98ff-4eef-8990-cec33c106b5c.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7a480d46-98ff-4eef-8990-cec33c106b5c/storage_v2/_src_/database/beejeetest.WldnmA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7a480d46-98ff-4eef-8990-cec33c106b5c/storage_v2/_src_/database/beejeetest.WldnmA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7a480d46-98ff-4eef-8990-cec33c106b5c/storage_v2/_src_/database/beejeetest.WldnmA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7a480d46-98ff-4eef-8990-cec33c106b5c/storage_v2/_src_/database/beejeetest.WldnmA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/RoleMiddleware.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/PermissionServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/RolesServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_29_104844_create_roles_permissions_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/common/errors.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/errors.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tasks.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a480d46-98ff-4eef-8990-cec33c106b5c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a480d46-98ff-4eef-8990-cec33c106b5c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a480d46-98ff-4eef-8990-cec33c106b5c/storage_v2/_src_/database/beejeetest.WldnmA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a480d46-98ff-4eef-8990-cec33c106b5c/storage_v2/_src_/database/beejeetest.WldnmA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +168,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/common" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -181,6 +178,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/common" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -200,7 +202,12 @@
       <workItem from="1601378449351" duration="4867000" />
       <workItem from="1601378291696" duration="516000" />
       <workItem from="1601378817419" duration="72000" />
-      <workItem from="1601378905391" duration="187000" />
+      <workItem from="1601378905391" duration="2686000" />
+      <workItem from="1601578305251" duration="599000" />
+      <workItem from="1601664763944" duration="6466000" />
+      <workItem from="1601662692150" duration="320000" />
+      <workItem from="1601810927742" duration="4917000" />
+      <workItem from="1601825890313" duration="11561000" />
     </task>
     <servers />
   </component>
@@ -224,10 +231,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="555" y="180" width="800" height="672" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601376228937" />
-    <state x="737" y="248" width="436" height="537" key="NewPhpClassDialog" timestamp="1601299707496">
+    <state x="737" y="248" width="506" height="537" key="NewPhpClassDialog" timestamp="1601655855320">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="737" y="248" width="436" height="537" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601299707496" />
+    <state x="737" y="248" width="506" height="537" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601655855320" />
+    <state x="778" y="445" width="354" height="142" key="NewPhpFileDialog" timestamp="1601660236538">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="778" y="445" width="354" height="142" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601660236538" />
     <state x="546" y="247" key="SettingsEditor" timestamp="1601378895054">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -236,13 +247,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="100" y="99" width="1720" height="840" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601378717156" />
-    <state x="666" y="268" width="587" height="502" key="find.popup" timestamp="1601378415694">
+    <state x="666" y="268" width="587" height="502" key="find.popup" timestamp="1601662421307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="268" width="587" height="502" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601378415694" />
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1601378428049">
+    <state x="666" y="268" width="587" height="502" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601662421307" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1601662423738">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601378428049" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601662423738" />
   </component>
 </project>
