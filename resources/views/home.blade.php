@@ -4,7 +4,7 @@
     <!-- Create Task Form... -->
     <!-- Bootstrap Boilerplate... -->
 
-    <div class="panel-body">
+    <div class="container">
         <!-- Display Validation Errors -->
         @include('common.errors')
 
@@ -48,90 +48,81 @@
             </div>
         </form>
 
-    </div>
-
     <!-- Current Tasks -->
     @if (count($tasks) > 0)
-        <div class="container">
-            <div class="card-body">
-                Current Tasks
-            </div>
-
-            <div class="container">
-
-                    <!-- Table Headings -->
-                    <div class="row">
-                        <td class="col-sm">User Name</td>
-                        <th>&nbsp;</th>
-
-                        <td class="col-sm">E-mail</td>
-                        <th>&nbsp;</th>
-
-                        <td class="col-sm">Task</td>
-                        <th>&nbsp;</th>
-
-                        <td class="col-sm">Edit</td>
-                        <th>&nbsp;</th>
-
-                        <td class="col-sm">Delete</td>
-                    </div>
-
-                    <!-- Table Body -->
-
-                    <tbody>
-                    @foreach ($tasks as $task)
-                        <div class="row-cols-5">
-                            <!-- Task Name -->
-                            <div class="col-sm">
-                                <div>{{ $task->name }}</div>
-                            </div>
-                            <th>&nbsp;</th>
-
-                            <div class="col-sm">
-                                <div>{{ $task->email }}</div>
-                            </div>
-                            <th>&nbsp;</th>
-
-                            <div class="col-sm">
-                                <div style="overflow-wrap: anywhere">{{ $task->text }}</div>
-                            </div>
-                            <th>&nbsp;</th>
-
-                            <div class="col-sm">
-                                <form action="/task/{{ $task->id }}" method="POST">
-                                    {{ csrf_field() }}
-                                    {{ method_field('DELETE') }}
-
-                                    <button>Edit Task</button>
-                                </form>
-                            </div>
-                            <th>&nbsp;</th>
-
-                            <div class="col-sm">
-                                <form action="/task/{{ $task->id, $task->user_id }}" method="POST">
-                                    {{ csrf_field() }}
-                                    {{ method_field('DELETE') }}
-
-                                    <button>Delete Task</button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm">
-                                    Одна из трёх колонокdsfafafafafsssssssssssssssssssssssssssssssssssssssss
-                                </div>
-                                <div class="col-sm">
-                                    Одна из трёх колонок
-                                </div>
-                                <div class="col-sm">
-                                    Одна из трёх колонок
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                    </tbody>
-            </div>
+        <div class="thead-dark">
+            <h3>Current Tasks</h3>
         </div>
+
+            <!-- Table Headings -->
+
+        <table class="table table-dark text-center">
+            <thead>
+            <tr>
+                <th scope="col-sm">User Name</th>
+                <th>&nbsp;</th>
+
+                <th scope="col-sm">E-mail</th>
+                <th>&nbsp;</th>
+
+                <th scope="col-sm">Task</th>
+                <th>&nbsp;</th>
+
+                <th scope="col-sm">Edit</th>
+                <th>&nbsp;</th>
+
+                <th scope="col-sm">Delete</th>
+                <th>&nbsp;</th>
+            </tr>
+            </thead>
+
+            <!-- Table Body -->
+
+            <tbody>
+            @foreach ($tasks as $task)
+                <tr scope="row">
+                    <!-- Task Name -->
+                    <td scope="col">
+                        <div>{{ $task->name }}</div>
+                    </td>
+                    <th>&nbsp;</th>
+
+                    <td scope="col">
+                        <div>{{ $task->email }}</div>
+                    </td>
+                    <th>&nbsp;</th>
+
+                    <td scope="col">
+                        <div style="overflow-wrap: anywhere">{{ $task->text }}</div>
+                    </td>
+                    <th>&nbsp;</th>
+
+                    <td scope="col">
+                        <form action="/task/edit/{{ $task->id }}" method="GET">
+                            {{ csrf_field() }}
+                            {{ method_field('GET') }}
+
+                            <button class="btn btn-success">
+                                <img src="https://img.icons8.com/fluent-systems-filled/2x/edit.png"/>
+                            </button>
+                        </form>
+                    </td>
+                    <th>&nbsp;</th>
+
+                    <td scope="col">
+                        <form action="/task/{{ $task->id}}" method="POST">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+
+                            <button class="btn btn-danger">
+                                <img src="https://img.icons8.com/carbon-copy/48/000000/filled-trash.png" />
+                            </button>
+                        </form>
+                    </td>
+                    <th>&nbsp;</th>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
     @endif
 @endsection

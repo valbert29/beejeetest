@@ -31,12 +31,37 @@ Route::post('/task', function (Request $request) {
     $validator = Validator::make($request->all(), [
         'name' => 'required|max:255',
     ]);
-
     if ($validator->fails()) {
         return redirect('/')
             ->withInput()
             ->withErrors($validator);
     }
+    $id = $request->id ?? null;
+    if ($id !== null) {
+        $task = Task::findOrFail($id);
+        $user = TaskUsers::findOrFail($task->user_id);
+
+        if ($user->name !== $request->name) {
+            $user->name = $request->name;
+        }
+        if ($user->email !== $request->email) {
+            $user->email = $request->email;
+        }
+        if ($task->text !== $request->text) {
+            $task->text = $request->text;
+        }
+
+        try {
+            $user->save();
+            $task->save();
+        } catch (InvalidArgumentException $e) {
+            $user->rollback();
+            $task->rollback();
+        }
+
+        return redirect('/home');
+    }
+
     $user = TaskUsers::create([
         'name' => $request->name,
         'email' => $request->email
@@ -74,4 +99,18 @@ Route::delete('/task/{id}', function ($id) {
     $user_id = $task->user_id;
     TaskUsers::findOrFail($user_id)->delete();
     return redirect('/home');
+});
+
+Route::get('/task/edit/{id}', function ($id) {
+    $task = Task::findOrFail($id);
+    $user = TaskUsers::findOrFail($task->user_id);
+    return view(
+        'edit',
+        [
+            'id' => $task->id,
+            'name' => $user->name,
+            'email' => $user->email,
+            'text' => $task->text
+        ]
+    );
 });
