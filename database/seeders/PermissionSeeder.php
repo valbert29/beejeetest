@@ -23,5 +23,10 @@ class PermissionSeeder extends Seeder
         $createTasks->name = 'Create Tasks';
         $createTasks->slug = 'create-tasks';
         $createTasks->save();
+
+        $editTasks = new Permission();
+        $editTasks->name = 'Edit Tasks';
+        $editTasks->slug = 'edit-tasks';
+        $editTasks->save();
     }
 }

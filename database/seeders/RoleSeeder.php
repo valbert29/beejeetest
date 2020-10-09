@@ -23,5 +23,10 @@ class RoleSeeder extends Seeder
         $developer->name = 'Web Developer';
         $developer->slug = 'web-developer';
         $developer->save();
+
+        $admin = new Role();
+        $admin->name = 'Admin';
+        $admin->slug = 'admin';
+        $admin->save();
     }
 }

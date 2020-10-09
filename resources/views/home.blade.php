@@ -67,9 +67,11 @@
 
                 <th scope="col-sm">Task</th>
                 <th>&nbsp;</th>
+                @if($canEditText)
+                    <th scope="col-sm">Edit</th>
+                    <th>&nbsp;</th>
+                @endif
 
-                <th scope="col-sm">Edit</th>
-                <th>&nbsp;</th>
 
                 <th scope="col-sm">Delete</th>
                 <th>&nbsp;</th>
@@ -93,21 +95,29 @@
                     <th>&nbsp;</th>
 
                     <td scope="col">
+                        @if($task->edited)
+                            <div>
+                                <p class="alert-success">
+                                    Изменено администратором ✔
+                                </p>
+                            </div>
+                        @endif
                         <div style="overflow-wrap: anywhere">{{ $task->text }}</div>
                     </td>
                     <th>&nbsp;</th>
+                    @if($canEditText)
+                        <td scope="col">
+                            <form action="/task/edit/{{ $task->id }}" method="GET">
+                                {{ csrf_field() }}
+                                {{ method_field('GET') }}
 
-                    <td scope="col">
-                        <form action="/task/edit/{{ $task->id }}" method="GET">
-                            {{ csrf_field() }}
-                            {{ method_field('GET') }}
-
-                            <button class="btn btn-success">
-                                <img src="https://img.icons8.com/fluent-systems-filled/2x/edit.png"/>
-                            </button>
-                        </form>
-                    </td>
-                    <th>&nbsp;</th>
+                                <button class="btn btn-success">
+                                    <img src="https://img.icons8.com/fluent-systems-filled/2x/edit.png"/>
+                                </button>
+                            </form>
+                        </td>
+                        <th>&nbsp;</th>
+                    @endif
 
                     <td scope="col">
                         <form action="/task/{{ $task->id}}" method="POST">

@@ -18,8 +18,10 @@ class UserSeeder extends Seeder
     {
         $developer = Role::where('slug','web-developer')->first();
         $manager = Role::where('slug', 'project-manager')->first();
+        $admin = Role::where('slig', 'admin')->first();
         $createTasks = Permission::where('slug','create-tasks')->first();
         $manageUsers = Permission::where('slug','manage-users')->first();
+        $editTasks = Permission::where('slug','edit-tasks')->first();
 
         $user1 = new User();
         $user1->name = 'Jhon Deo';

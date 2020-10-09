@@ -2,7 +2,7 @@
 @section('content')
     <!-- Create Task Form... -->
     <!-- Bootstrap Boilerplate... -->
-
+    @if($canEditText)
     <div class="container">
         <!-- Display Validation Errors -->
         @include('common.errors')
@@ -18,17 +18,17 @@
         <!-- Task Name -->
             <div class="form-group">
                 <input name="id" hidden="hidden" value="{{$id}}">
-                <label for="name" class="col-xs-6 col-sm-3 control-label">User Name</label>
+{{--                <label for="name" class="col-xs-6 col-sm-3 control-label">User Name</label>--}}
 
-                <div class="col-sm-6">
-                    <input type="text" name="name" value="{{ $name }}" id="task-name" maxlength="50" class="form-control">
-                </div>
+{{--                <div class="col-sm-6">--}}
+{{--                    <input type="text" name="name" value="{{ $name }}" id="task-name" maxlength="50" class="form-control">--}}
+{{--                </div>--}}
 
-                <label for="email" class="col-xs-6 col-sm-3 control-label">E-mail</label>
+{{--                <label for="email" class="col-xs-6 col-sm-3 control-label">E-mail</label>--}}
 
-                <div class="col-sm-6">
-                    <input type="email" name="email" value="{{ $email }}" id="task-name" maxlength="30" class="form-control">
-                </div>
+{{--                <div class="col-sm-6">--}}
+{{--                    <input type="email" name="email" value="{{ $email }}" id="task-name" maxlength="30" class="form-control">--}}
+{{--                </div>--}}
 
                 <label for="text" class="col-xs-6 col-sm-3 control-label">Task text</label>
 
@@ -47,4 +47,12 @@
                 </div>
             </div>
         </form>
+    </div>
+    @else
+        <div class="container">
+            <h2 class="text-center">
+                Sorry, You have no permission to edit it
+            </h2>
+        </div>
+    @endif
 @endsection

@@ -20,10 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83171322-7804-42d9-86e9-f111557fe4bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/PermissionSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/PermissionSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/RoleSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/RoleSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tasks.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,6 +206,7 @@
       <workItem from="1601810927742" duration="4917000" />
       <workItem from="1601825890313" duration="11561000" />
       <workItem from="1602165965567" duration="10440000" />
+      <workItem from="1602235824443" duration="4369000" />
     </task>
     <servers />
   </component>
@@ -226,6 +230,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="555" y="180" width="800" height="672" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601376228937" />
+    <state x="693" y="277" width="524" height="479" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602237685595">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="693" y="277" width="524" height="479" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602237685595" />
     <state x="737" y="248" width="506" height="537" key="NewPhpClassDialog" timestamp="1601655855320">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -242,13 +250,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="100" y="99" width="1720" height="840" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601378717156" />
-    <state x="666" y="268" width="587" height="502" key="find.popup" timestamp="1601662421307">
+    <state x="666" y="268" width="587" height="502" key="find.popup" timestamp="1602237418687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="268" width="587" height="502" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601662421307" />
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1601662423738">
+    <state x="666" y="268" width="587" height="502" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602237418687" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1602237983595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601662423738" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602237983595" />
   </component>
 </project>
